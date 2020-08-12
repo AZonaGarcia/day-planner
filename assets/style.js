@@ -36,10 +36,7 @@ for (var h = 9; h <= 17; h++) {
             console.log(hourInput)}
         ) 
 
-
     }) ()
-
-
 
 }
 
