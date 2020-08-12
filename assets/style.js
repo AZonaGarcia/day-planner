@@ -13,26 +13,33 @@ $("#hour15").text(moment("15:00", "HH:mm", true).format("hh:mm A"))
 $("#hour16").text(moment("16:00", "HH:mm", true).format("hh:mm A"))
 $("#hour17").text(moment("17:00", "HH:mm", true).format("hh:mm A"))
 
-var hourInput = { };
+var hourInput = {};
 
 for (var h = 9; h <= 17; h++) {
-   
+
     if (moment().format("HH") > h) {
-         // past
-         $("#input" + h).addClass("past")
+        // past
+        $("#input" + h).addClass("past")
     } else if (moment().format("HH") == h) {
         //present
         $("#input" + h).addClass("present")
     } else {
         //future
         $("#input" + h).addClass("future")
-    };
+    }
 
-    
+    (function() {
+        var hr = h 
+        $("#btn" + hr).on('click', function (e) {
+            hourInput[hr] = $("#input" + hr).val()
+            localStorage.setItem("hourInput", JSON.stringify(hourInput))
+            console.log(hourInput)}
+        ) 
+
+
+    }) ()
+
+
+
 }
 
-$("#btn" + h).on('click', function(e) {
-    hourInput[h] = $("#input" + h).val()
-    localStorage.setItem("hourInput", JSON.stringify(hourInput))
-    
-})
