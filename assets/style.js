@@ -1,4 +1,4 @@
 $(".date").text(moment().format("MMMM Do YYYY"))
 $(".time").text(moment().format('LT'))
 
-$(".hour").textmoment().format('HH')
+$("#time").text(moment().format('HH'))
