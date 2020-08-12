@@ -13,3 +13,17 @@ $("#hour15").text(moment("15:00", "HH:mm", true).format("hh:mm A"))
 $("#hour16").text(moment("16:00", "HH:mm", true).format("hh:mm A"))
 $("#hour17").text(moment("17:00", "HH:mm", true).format("hh:mm A"))
 
+for (var h = 9; h <= 17; h++) {
+   
+    if (moment().format("HH") > h) {
+         // past
+         $("#input" + h).addClass("past")
+    } else if (moment().format("HH") == h) {
+        //present
+        $("#input" + h).addClass("present")
+    } else {
+        //future
+        $("#input" + h).addClass("future")
+    };
+
+}
