@@ -28,11 +28,11 @@ for (var h = 9; h <= 17; h++) {
         $("#input" + h).addClass("future")
     };
 
-    $("#btn" + h).on('click', function(e) {
-        hourInput[h] = $("#input" + h).val()
-        localStorage.setItem("hourInput", JSON.stringify(hourInput))
-        
-    })
-
+    
 }
 
+$("#btn" + h).on('click', function(e) {
+    hourInput[h] = $("#input" + h).val()
+    localStorage.setItem("hourInput", JSON.stringify(hourInput))
+    
+})
