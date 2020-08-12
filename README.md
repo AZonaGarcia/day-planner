@@ -10,7 +10,7 @@ SO THAT I can manage my time effectively
 - [ X ] Display current date at the top of the calendar
 - [ X ] Create timeblocks for standard business hours
 - [ X ] Color code time blocks to indicate past, present, future
-- [   ] Make time blocks accept user input
+- [ X ] Make time blocks accept user input
 - [ X ] Create save button for event added by user
 - [   ] Store in local storage
 
