@@ -18,4 +18,4 @@ SO THAT I can manage my time effectively
 ## Link to Website:
 https://azonagarcia.github.io/day-planner/
 
-![day planner screenshot] (https://github.com/azonagarcia/day-planner/blob/master/assets/day-planner-screenshot.png)
+![day planner screenshot](https://github.com/azonagarcia/day-planner/blob/master/assets/day-planner-screenshot.png)
