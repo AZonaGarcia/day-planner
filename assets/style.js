@@ -13,6 +13,8 @@ $("#hour15").text(moment("15:00", "HH:mm", true).format("hh:mm A"))
 $("#hour16").text(moment("16:00", "HH:mm", true).format("hh:mm A"))
 $("#hour17").text(moment("17:00", "HH:mm", true).format("hh:mm A"))
 
+var hourInput = { };
+
 for (var h = 9; h <= 17; h++) {
    
     if (moment().format("HH") > h) {
@@ -26,4 +28,11 @@ for (var h = 9; h <= 17; h++) {
         $("#input" + h).addClass("future")
     };
 
+    $("#btn" + h).on('click', function(e) {
+        hourInput[h] = $("#input" + h).val()
+        localStorage.setItem("hourInput", JSON.stringify(hourInput))
+        
+    })
+
 }
+
