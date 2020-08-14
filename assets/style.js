@@ -13,9 +13,15 @@ $("#hour15").text(moment("15:00", "HH:mm", true).format("hh:mm A"))
 $("#hour16").text(moment("16:00", "HH:mm", true).format("hh:mm A"))
 $("#hour17").text(moment("17:00", "HH:mm", true).format("hh:mm A"))
 
-var hourInput = {};
+if (localStorage.getItem("hourInput") == null) {
+    var hourInput = {};
+} else {
+    var hourInput = JSON.parse(localStorage.getItem("hourInput"));
+}
+
 
 for (var h = 9; h <= 17; h++) {
+    $("#input" + h).val(hourInput[h])
 
     if (moment().format("HH") > h) {
         // past
